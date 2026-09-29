@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>23STUDIO — Кино, Цуврал, Аниме</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  background:#080d14;
+  color:#fff;
+  font-family:Arial, sans-serif;
+}
+
+header{
+  height:65px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 18px;
+  background:#0b111a;
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom:1px solid #1c2633;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:800;
+}
+
+.logo span{
+  color:#7657ff;
+}
+
+.menu{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.menu button{
+  background:none;
+  border:0;
+  color:#ddd;
+  font-size:14px;
+}
+
+.search{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#18212d;
+  border:0;
+  color:#fff;
+  font-size:18px;
+}
+
+.hero{
+  height:430px;
+  padding:30px 20px;
+  display:flex;
+  align-items:flex-end;
+  background:
+    linear-gradient(0deg,#080d14 5%,transparent 70%),
+    linear-gradient(90deg,#080d14 0%,transparent 75%),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80")
+    center/cover;
+}
+
+.hero-content{
+  max-width:650px;
+}
+
+.badge{
+  display:inline-block;
+  background:#7657ff;
+  padding:6px 10px;
+  border-radius:7px;
+  font-size:12px;
+  margin-bottom:12px;
+}
+
+.hero h1{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  color:#d0d4dc;
+  line-height:1.5;
+  margin-bottom:18px;
+}
+
+.watch{
+  background:#7657ff;
+  color:white;
+  border:0;
+  padding:13px 23px;
+  border-radius:10px;
+  font-size:15px;
+  font-weight:bold;
+}
+
+.section{
+  padding:22px 18px 5px;
+}
+
+.section-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:15px;
+}
+
+.section-title h2{
+  font-size:20px;
+}
+
+.section-title a{
+  color:#8d78ff;
+  font-size:13px;
+}
+
+.categories{
+  display:flex;
+  gap:9px;
+  overflow-x:auto;
+  padding-bottom:10px;
+}
+
+.categories::-webkit-scrollbar{
+  display:none;
+}
+
+.category{
+  flex:none;
+  background:#141d29;
+  padding:11px 15px;
+  border-radius:12px;
+  color:#ddd;
+  font-size:13px;
+}
+
+.category.active{
+  background:#7657ff;
+  color:#fff;
+}
+
+.movies{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.movie{
+  min-width:0;
+}
+
+.poster{
+  height:190px;
+  border-radius:10px;
+  overflow:hidden;
+  background:linear-gradient(145deg,#29344b,#111722);
+  display:flex;
+  align-items:flex-end;
+  position:relative;
+}
+
+.poster img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.poster-title{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:25px 8px 8px;
+  background:linear-gradient(transparent,rgba(0,0,0,.9));
+  font-size:12px;
+  font-weight:bold;
+}
+
+.movie h3{
+  font-size:13px;
+  margin-top:8px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.movie p{
+  color:#7f8997;
+  font-size:11px;
+  margin-top:4px;
+}
+
+.bottom{
+  height:70px;
+  position:sticky;
+  bottom:0;
+  background:#0b111a;
+  border-top:1px solid #202a36;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  margin-top:30px;
+}
+
+.bottom div{
+  text-align:center;
+  color:#7d8795;
+  font-size:11px;
+}
+
+.bottom .active{
+  color:#8064ff;
+}
+
+.bottom-icon{
+  font-size:20px;
+  margin-bottom:4px;
+}
+
+@media(min-width:700px){
+  .movies{
+    grid-template-columns:repeat(6,1fr);
+  }
+
+  .hero{
+    height:520px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">23<span>STUDIO</span></div>
+
+  <div class="menu">
+    <button>Кино</button>
+    <button>Цуврал</button>
+    <button>Аниме</button>
+    <button class="search">⌕</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <span class="badge">ОНЦЛОХ</span>
+
+    <h1>Кино ертөнцөд тавтай морил</h1>
+
+    <p>
+      Шинэ болон алдартай кино, цуврал, анимег
+      Монгол хэлээр тухтай үзээрэй.
+    </p>
+
+    <button class="watch">▶ Одоо үзэх</button>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="section-title">
+    <h2>Ангилал</h2>
+  </div>
+
+  <div class="categories">
+    <div class="category active">Бүх кино</div>
+    <div class="category">🎬 Кино</div>
+    <div class="category">📺 Цуврал</div>
+    <div class="category">🎌 Аниме</div>
+    <div class="category">❤️ Романтик</div>
+    <div class="category">👻 Аймшиг</div>
+    <div class="category">😂 Инээдэм</div>
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="section-title">
+    <h2>Шинээр нэмэгдсэн</h2>
+    <a>Бүгдийг харах →</a>
+  </div>
+
+  <div class="movies">
+
+    <div class="movie">
+      <div class="poster">
+        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=500&q=80">
+        <div class="poster-title">Lovely Story</div>
+      </div>
+      <h3>Lovely Story</h3>
+      <p>2024 • Цуврал</p>
+    </div>
+
+    <div class="movie">
+      <div class="poster">
+        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=500&q=80">
+        <div class="poster-title">
